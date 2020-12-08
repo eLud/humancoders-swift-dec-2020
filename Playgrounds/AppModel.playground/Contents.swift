@@ -15,7 +15,7 @@ struct Book: Hashable {
 
     var isRead: Bool
     let author: Author?
-    var imageURL: URL?
+    let imageURL: URL?
     //Date
 }
 
@@ -27,6 +27,10 @@ struct Author: Hashable {
     //Get-only computed property
     var fullName: String {
         return firstName + " " + lastName
+    }
+
+    init(firstName: String, lastName: String) {
+        self.init(firstName: firstName, lastName: lastName, middleName: nil)
     }
 
     init(firstName: String, lastName: String, middleName: String? = nil) {
@@ -71,7 +75,7 @@ author.fullName
 
 Book.standardPagesNumber = 250
 
-let aBook = Book(title: "", nbOfPages: Book.standardPagesNumber, isPocket: false, isRead: false, author: author)
+let aBook = Book(title: "", nbOfPages: Book.standardPagesNumber, isPocket: false, isRead: false, author: nil, imageURL: nil)
 
 let myLibrary = Library()
 myLibrary.add(aBook)
