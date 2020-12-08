@@ -47,6 +47,30 @@ var emptyDico: [String:Int] = [:]
 var emptyDico2 = [String:Int]()
 var emptyDico3 = Dictionary<String,Int>()
 
+var capitales = ["France" : "Paris", "USA" : "Washington", "Canada" : "Ottawa"]
+
+capitales["Irlande"] = "Dublin"
+
+let capFrance: String? = capitales["France"]
+let capIrlande: String? = capitales["Irlande"]
+
+// ! : Force-unwrap operator
+print("La capitale de la France est " + capFrance!)
+// ?? : Nil-coalescing operator (si "some" on utilise, si nil, on prend le défaut)
+print("La capitale de l'Irlande est " + (capIrlande ?? "Je sais pas"))
+
+
+   //String     //Optional<String>
+if let dublin = capitales["Irlande"] {
+    print("La capitale de l'Irlande est " + dublin)
+}
+
+if (capitales["Irlande"] != nil) {
+    print("La capitale de l'Irlande est " + capitales["Irlande"]!)
+}
+
+print(capIrlande?.uppercased())
+
 //: #Classes et structures
 
 struct Dog {

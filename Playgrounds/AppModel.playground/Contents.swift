@@ -6,19 +6,34 @@ import Foundation
 // Struct <Truc>
 
 struct Book: Hashable {
+
+    static var standardPagesNumber: Int = 200
+
     let title: String
     let nbOfPages: Int
     let isPocket: Bool
 
     var isRead: Bool
-    let author: Author
-    //URL (pour image)
+    let author: Author?
+    var imageURL: URL?
     //Date
 }
 
 struct Author: Hashable {
-    let firstname: String
-    let lastname: String
+    let firstName: String
+    let middleName: String?
+    let lastName: String
+
+    //Get-only computed property
+    var fullName: String {
+        return firstName + " " + lastName
+    }
+
+    init(firstName: String, lastName: String, middleName: String? = nil) {
+        self.firstName = firstName
+        self.lastName = lastName
+        self.middleName = middleName
+    }
 }
 
 class Library {
@@ -28,9 +43,17 @@ class Library {
     init(initialBooks: Set<Book> = []) {
         books = initialBooks
     }
+
+    // Computed properties : O(n)
+//    var sortedBooks: [Book] {
+//        Array<Book>()
+//    }
+
            //ext   int
     func add(_ book: Book) {
         let result = books.insert(book)
+        books.count
+        books.isEmpty
         print(result)
     }
 
@@ -38,12 +61,17 @@ class Library {
         //books.remove(at: index)
     }
 
-    func remove(_ book: Book) {
-        books.remove(book)
+    func remove(_ book: Book) -> Book? {
+        return books.remove(book)
     }
 }
 
-let aBook = Book(title: "", nbOfPages: 0, isPocket: false, isRead: false, author: Author(firstname: "", lastname: ""))
+var author = Author(firstName: "Justin", lastName: "Case")
+author.fullName
+
+Book.standardPagesNumber = 250
+
+let aBook = Book(title: "", nbOfPages: Book.standardPagesNumber, isPocket: false, isRead: false, author: author)
 
 let myLibrary = Library()
 myLibrary.add(aBook)
