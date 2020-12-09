@@ -23,8 +23,6 @@ class Library {
            //ext   int
     func add(_ book: Book) {
         let result = books.insert(book)
-        books.count
-        books.isEmpty
         print(result)
     }
 
@@ -34,5 +32,21 @@ class Library {
 
     func remove(_ book: Book) -> Book? {
         return books.remove(book)
+    }
+
+    // Closure based
+    func sortedBooks() -> [Book] {
+        return books.sorted { (book1, book2) -> Bool in
+            return book1.title < book2.title
+        }
+    }
+
+    // Function based
+    func sortedBooks2() -> [Book] {
+        return books.sorted(by: sort(book1:book2:))
+    }
+
+    func sort(book1: Book, book2: Book) -> Bool {
+        return book1.title < book2.title
     }
 }
