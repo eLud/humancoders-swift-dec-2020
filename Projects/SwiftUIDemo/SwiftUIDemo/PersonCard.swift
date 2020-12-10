@@ -36,6 +36,12 @@ struct PersonCard: View {
 
 struct PersonCard_Previews: PreviewProvider {
     static var previews: some View {
-        PersonCard()
+        Group {
+            PersonCard()
+                .preferredColorScheme(.light)
+            PersonCard()
+                .preferredColorScheme(.dark)
+        }
+
     }
 }

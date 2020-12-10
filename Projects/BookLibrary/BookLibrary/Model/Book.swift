@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct Book: Hashable {
+struct Book: Hashable, Identifiable {
 
     //Raw Value (String, Character, Int, Double/Float)
     //Associated Values
-    enum Style: Int, CaseIterable {
+    enum Style: Int, CaseIterable, Identifiable {
         case police
         case sciFi
         case romance
@@ -32,6 +32,10 @@ struct Book: Hashable {
                 return "Educational"
             }
         }
+
+        var id: Style {
+            return self
+        }
     }
     
     static var standardPagesNumber: Int = 200
@@ -47,4 +51,5 @@ struct Book: Hashable {
     let imageURL: URL?
     //Date
 
+    let id = UUID()
 }

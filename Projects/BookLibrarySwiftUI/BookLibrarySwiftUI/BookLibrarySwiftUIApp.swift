@@ -1,6 +1,6 @@
 //
-//  SwiftUIDemoApp.swift
-//  SwiftUIDemo
+//  BookLibrarySwiftUIApp.swift
+//  BookLibrarySwiftUI
 //
 //  Created by Ludovic Ollagnier on 10/12/2020.
 //
@@ -8,10 +8,10 @@
 import SwiftUI
 
 @main
-struct SwiftUIDemoApp: App {
+struct BookLibrarySwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            PersonCard()
+            BookListView()
         }
     }
 }
