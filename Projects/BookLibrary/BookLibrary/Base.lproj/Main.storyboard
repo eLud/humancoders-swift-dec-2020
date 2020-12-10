@@ -188,9 +188,8 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="NqO-xJ-oD8"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uqg-zx-y1R">
-                                <rect key="frame" x="166" y="771" width="82" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uqg-zx-y1R">
+                                <rect key="frame" x="190" y="752" width="34" height="30"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="save:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OWU-U1-j9d"/>
@@ -203,8 +202,10 @@
                             <constraint firstAttribute="bottom" secondItem="xG7-nn-OV2" secondAttribute="bottom" id="4pj-Sy-4Gw"/>
                             <constraint firstItem="xG7-nn-OV2" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.1" priority="750" id="6Ot-AT-Byb"/>
                             <constraint firstItem="YPL-CK-892" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="99i-d1-QUE"/>
+                            <constraint firstItem="uqg-zx-y1R" firstAttribute="centerX" secondItem="xG7-nn-OV2" secondAttribute="centerX" id="Gc5-2b-KbX"/>
                             <constraint firstItem="xG7-nn-OV2" firstAttribute="top" secondItem="YPL-CK-892" secondAttribute="bottom" id="Jjp-Sc-mPD"/>
                             <constraint firstItem="xG7-nn-OV2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="MjY-xS-TUr"/>
+                            <constraint firstItem="uqg-zx-y1R" firstAttribute="centerY" secondItem="xG7-nn-OV2" secondAttribute="centerY" id="aH8-gy-u4A"/>
                             <constraint firstItem="YPL-CK-892" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nUZ-t6-u2z"/>
                             <constraint firstItem="xG7-nn-OV2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uRp-xl-M6x"/>
                             <constraint firstItem="YPL-CK-892" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="vtm-K8-fbe"/>

@@ -9,6 +9,8 @@ import Foundation
 
 class Library {
 
+    static let shared = Library()
+    
     var books: Set<Book>
 
     init(initialBooks: Set<Book> = []) {
@@ -24,6 +26,10 @@ class Library {
     func add(_ book: Book) {
         let result = books.insert(book)
         print(result)
+        if result.inserted {
+            let notifCenter = NotificationCenter.default
+            notifCenter.post(name: Notification.Name(rawValue: "LibraryUpdated"), object: self)
+        }
     }
 
     func remove(at index: Int) {
@@ -31,7 +37,12 @@ class Library {
     }
 
     func remove(_ book: Book) -> Book? {
-        return books.remove(book)
+        let removed = books.remove(book)
+        if removed != nil {
+            let notifCenter = NotificationCenter.default
+            notifCenter.post(name: Notification.Name(rawValue: "LibraryUpdated"), object: self)
+        }
+        return removed
     }
 
     // Closure based

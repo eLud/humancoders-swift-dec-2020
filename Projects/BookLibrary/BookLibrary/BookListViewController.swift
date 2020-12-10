@@ -19,30 +19,10 @@ class BookListViewController: UIViewController {
         // Do any additional setup after loading the view.
         tableView.dataSource = self
 
-        library.add(Book(title: "Book1", nbOfPages: 100, isPocket: true, style: .educational, isRead: false, author: Author(firstName: "Ludovic", lastName: "Ollagnier"), imageURL: nil))
-        library.add(Book(title: "Book2", nbOfPages: 200, isPocket: true, style: .educational, isRead: false, author: Author(firstName: "Ludovic", lastName: "Ollagnier"), imageURL: nil))
-        library.add(Book(title: "Book3", nbOfPages: 200, isPocket: true, style: .educational, isRead: false, author: Author(firstName: "Ludovic", lastName: "Ollagnier"), imageURL: nil))
-        library.add(Book(title: "Book4", nbOfPages: 200, isPocket: true, style: .educational, isRead: false, author: Author(firstName: "Ludovic", lastName: "Ollagnier"), imageURL: nil))
-        library.add(Book(title: "Book5", nbOfPages: 200, isPocket: true, style: .educational, isRead: false, author: Author(firstName: "Ludovic", lastName: "Ollagnier"), imageURL: nil))
-        library.add(Book(title: "Book6", nbOfPages: 200, isPocket: true, style: .educational, isRead: false, author: Author(firstName: "Ludovic", lastName: "Ollagnier"), imageURL: nil))
-        library.add(Book(title: "Book7", nbOfPages: 200, isPocket: true, style: .educational, isRead: false, author: Author(firstName: "Ludovic", lastName: "Ollagnier"), imageURL: nil))
-        library.add(Book(title: "Book8", nbOfPages: 200, isPocket: true, style: .educational, isRead: false, author: Author(firstName: "Ludovic", lastName: "Ollagnier"), imageURL: nil))
-        library.add(Book(title: "Book9", nbOfPages: 200, isPocket: true, style: .educational, isRead: false, author: Author(firstName: "Ludovic", lastName: "Ollagnier"), imageURL: nil))
-        library.add(Book(title: "Book10", nbOfPages: 200, isPocket: true, style: .educational, isRead: false, author: Author(firstName: "Ludovic", lastName: "Ollagnier"), imageURL: nil))
-        library.add(Book(title: "Book11", nbOfPages: 200, isPocket: true, style: .educational, isRead: false, author: Author(firstName: "Ludovic", lastName: "Ollagnier"), imageURL: nil))
-        library.add(Book(title: "Book12", nbOfPages: 200, isPocket: true, style: .educational, isRead: false, author: Author(firstName: "Ludovic", lastName: "Ollagnier"), imageURL: nil))
-        library.add(Book(title: "Book122", nbOfPages: 200, isPocket: true, style: .educational, isRead: false, author: Author(firstName: "Ludovic", lastName: "Ollagnier"), imageURL: nil))
-        library.add(Book(title: "Book3456", nbOfPages: 200, isPocket: true, style: .educational, isRead: false, author: Author(firstName: "Ludovic", lastName: "Ollagnier"), imageURL: nil))
-        library.add(Book(title: "dfgbfh", nbOfPages: 200, isPocket: true, style: .educational, isRead: false, author: Author(firstName: "Ludovic", lastName: "Ollagnier"), imageURL: nil))
-        library.add(Book(title: "Book2", nbOfPages: 200, isPocket: true, style: .educational, isRead: false, author: Author(firstName: "Ludovic", lastName: "hfghn"), imageURL: nil))
-        library.add(Book(title: "Book2", nbOfPages: 200, isPocket: true, style: .educational, isRead: false, author: Author(firstName: "Ludovic", lastName: "Ollagnier"), imageURL: nil))
-        library.add(Book(title: "fghn", nbOfPages: 200, isPocket: true, style: .educational, isRead: false, author: Author(firstName: "Ludovic", lastName: "Ollagnier"), imageURL: nil))
-        library.add(Book(title: "hg", nbOfPages: 200, isPocket: true, style: .educational, isRead: false, author: Author(firstName: "Ludovic", lastName: "Olfhgnlagnier"), imageURL: nil))
-        library.add(Book(title: "Boghgok2", nbOfPages: 200, isPocket: true, style: .educational, isRead: false, author: Author(firstName: "Ludovic", lastName: "Ollagnier"), imageURL: nil))
-        library.add(Book(title: "Bohghghghk2", nbOfPages: 200, isPocket: true, style: .educational, isRead: false, author: Author(firstName: "Ludovic", lastName: "Ollagnier"), imageURL: nil))
-        library.add(Book(title: "Book2hggh", nbOfPages: 200, isPocket: true, style: .educational, isRead: false, author: Author(firstName: "Ludovic", lastName: "Ollagnier"), imageURL: nil))
-        library.add(Book(title: "Book2", nbOfPages: 200, isPocket: true, style: .educational, isRead: false, author: Author(firstName: "Ludovic", lastName: "Ollagnier"), imageURL: nil))
-        library.add(Book(title: "Bookrzr2", nbOfPages: 200, isPocket: true, style: .educational, isRead: false, author: Author(firstName: "Ludovic", lastName: "fezea"), imageURL: nil))
+        let notifCenter = NotificationCenter.default
+        notifCenter.addObserver(forName: Notification.Name(rawValue: "LibraryUpdated"), object: library, queue: OperationQueue.main) { (notif) in
+            self.tableView.reloadData()
+        }
     }
     
 
@@ -64,15 +44,16 @@ class BookListViewController: UIViewController {
             destination.currentBook = selectedBook
 
         } else if segue.identifier == "showForm" {
-
+            guard let destination = segue.destination as? ViewController else { fatalError("Wrong received viewcontroller type ") }
+            destination.library = library
         }
     }
 
 }
 
 extension BookListViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return library.books.count
     }
 
