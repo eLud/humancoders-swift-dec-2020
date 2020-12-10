@@ -19,6 +19,7 @@
 		33E01DEC257FD6480024194A /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E01DEB257FD6480024194A /* UITextField+Extensions.swift */; };
 		33E01DEF2580C48B0024194A /* BadgedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E01DEE2580C48B0024194A /* BadgedLabel.swift */; };
 		33E01E13258125A90024194A /* BookListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E01E12258125A90024194A /* BookListViewController.swift */; };
+		33FDCDB32582212900FDF434 /* BookDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FDCDB22582212900FDF434 /* BookDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		33E01DEB257FD6480024194A /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
 		33E01DEE2580C48B0024194A /* BadgedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgedLabel.swift; sourceTree = "<group>"; };
 		33E01E12258125A90024194A /* BookListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListViewController.swift; sourceTree = "<group>"; };
+		33FDCDB22582212900FDF434 /* BookDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				33E01DCC257FBFBB0024194A /* SceneDelegate.swift */,
 				33E01DCE257FBFBB0024194A /* ViewController.swift */,
 				33E01E12258125A90024194A /* BookListViewController.swift */,
+				33FDCDB22582212900FDF434 /* BookDetailsViewController.swift */,
 				33E01DEE2580C48B0024194A /* BadgedLabel.swift */,
 				33E01DEB257FD6480024194A /* UITextField+Extensions.swift */,
 				33E01DD0257FBFBB0024194A /* Main.storyboard */,
@@ -165,6 +168,7 @@
 			files = (
 				33E01DEC257FD6480024194A /* UITextField+Extensions.swift in Sources */,
 				33E01DE6257FBFFA0024194A /* Author.swift in Sources */,
+				33FDCDB32582212900FDF434 /* BookDetailsViewController.swift in Sources */,
 				33E01E13258125A90024194A /* BookListViewController.swift in Sources */,
 				33E01DE0257FBFE40024194A /* Book.swift in Sources */,
 				33E01DEF2580C48B0024194A /* BadgedLabel.swift in Sources */,

@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var isPocketSwitch: UISwitch!
     @IBOutlet weak var isReadSwitch: UISwitch!
 
-    var library = Library()
+    var library: Library?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +47,7 @@ class ViewController: UIViewController {
 
         let newBook = Book(title: title, nbOfPages: nbPage, isPocket: isPocketSwitch.isOn, style: style, isRead: isReadSwitch.isOn, author: nil, imageURL: nil)
 
-        library.add(newBook)
+        library?.add(newBook)
 
         let host = UIHostingController(rootView: BadgedLabel(text: "Hello World"))
         present(host, animated: true, completion: nil)
