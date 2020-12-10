@@ -21,11 +21,19 @@ class BookListViewController: UIViewController {
 
         let notifCenter = NotificationCenter.default
         notifCenter.addObserver(forName: Notification.Name(rawValue: "LibraryUpdated"), object: library, queue: OperationQueue.main) { (notif) in
-            self.tableView.reloadData()
+            self.reloadTableView()
         }
+
+        let refresh = UIRefreshControl(frame: CGRect.zero, primaryAction: UIAction(handler: { (action) in
+            self.reloadTableView()
+        }))
+        tableView.refreshControl = refresh
     }
     
-
+    func reloadTableView() {
+        self.tableView.reloadData()
+        tableView.refreshControl?.endRefreshing()
+    }
 
     // MARK: - Navigation
 
