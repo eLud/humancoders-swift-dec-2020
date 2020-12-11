@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Author: Hashable {
+struct Author: Hashable, Codable {
     let firstName: String
     let middleName: String?
     let lastName: String
