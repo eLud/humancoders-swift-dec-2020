@@ -11,8 +11,20 @@ struct BookDetailsView: View {
 
     var book: Book
 
+    @AppStorage("TextIsLarge") var largeText = false
+
     var body: some View {
-        Text(book.title)
+        VStack {
+            Toggle(isOn: $largeText, label: {
+                Text("Text is large")
+            })
+            Text(book.title)
+                .font(largeText ? .largeTitle : .title)
+            if largeText {
+                Text("User wants large text")
+            }
+        }
+
     }
 }
 
