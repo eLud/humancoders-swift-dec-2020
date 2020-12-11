@@ -24,8 +24,10 @@ struct BookListView: View {
                         })
                 }
                 .navigationTitle("My books")
-                .navigationBarItems(trailing: Button("Plus") {
-                    formIsShown = true
+                .toolbar(content: {
+                    Button("Plus") {
+                        formIsShown = true
+                    }
                 })
                 .sheet(isPresented: $formIsShown, content: {
                     FormView(library: library)

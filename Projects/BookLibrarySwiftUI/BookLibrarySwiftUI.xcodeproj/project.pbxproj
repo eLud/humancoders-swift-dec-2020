@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33EA5AE4258369F8005A80BE /* BooksMacApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EA5AE3258369F8005A80BE /* BooksMacApp.swift */; };
+		33EA5AE6258369F8005A80BE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EA5AE5258369F8005A80BE /* ContentView.swift */; };
+		33EA5AE8258369F8005A80BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33EA5AE7258369F8005A80BE /* Assets.xcassets */; };
+		33EA5AEB258369F8005A80BE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33EA5AEA258369F8005A80BE /* Preview Assets.xcassets */; };
+		33EA5AF325836A1D005A80BE /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FDCDF825826D6C00FDF434 /* Author.swift */; };
+		33EA5AF425836A1D005A80BE /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FDCDF925826D6C00FDF434 /* Book.swift */; };
+		33EA5AF525836A1D005A80BE /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FDCDFA25826D6C00FDF434 /* Library.swift */; };
+		33EA5AF825836A28005A80BE /* BookListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FDCE0225827A3D00FDF434 /* BookListView.swift */; };
+		33EA5AF925836A28005A80BE /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FDCDFF25827A3300FDF434 /* FormView.swift */; };
+		33EA5AFA25836A28005A80BE /* BookDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FDCE0525827A4F00FDF434 /* BookDetailsView.swift */; };
 		33FDCDE825826D5400FDF434 /* BookLibrarySwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FDCDE725826D5400FDF434 /* BookLibrarySwiftUIApp.swift */; };
 		33FDCDEC25826D5500FDF434 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33FDCDEB25826D5500FDF434 /* Assets.xcassets */; };
 		33FDCDEF25826D5500FDF434 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33FDCDEE25826D5500FDF434 /* Preview Assets.xcassets */; };
@@ -19,6 +29,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		33EA5AD7258368F6005A80BE /* BookLibrarySwiftUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BookLibrarySwiftUI.entitlements; sourceTree = "<group>"; };
+		33EA5AE1258369F8005A80BE /* BooksMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BooksMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		33EA5AE3258369F8005A80BE /* BooksMacApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksMacApp.swift; sourceTree = "<group>"; };
+		33EA5AE5258369F8005A80BE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		33EA5AE7258369F8005A80BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		33EA5AEA258369F8005A80BE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		33EA5AEC258369F8005A80BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33EA5AED258369F8005A80BE /* BooksMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BooksMac.entitlements; sourceTree = "<group>"; };
 		33FDCDE425826D5400FDF434 /* BookLibrarySwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookLibrarySwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33FDCDE725826D5400FDF434 /* BookLibrarySwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookLibrarySwiftUIApp.swift; sourceTree = "<group>"; };
 		33FDCDEB25826D5500FDF434 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -33,6 +51,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		33EA5ADE258369F8005A80BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		33FDCDE125826D5400FDF434 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -43,10 +68,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		33EA5AE2258369F8005A80BE /* BooksMac */ = {
+			isa = PBXGroup;
+			children = (
+				33EA5AE3258369F8005A80BE /* BooksMacApp.swift */,
+				33EA5AE5258369F8005A80BE /* ContentView.swift */,
+				33EA5AE7258369F8005A80BE /* Assets.xcassets */,
+				33EA5AEC258369F8005A80BE /* Info.plist */,
+				33EA5AED258369F8005A80BE /* BooksMac.entitlements */,
+				33EA5AE9258369F8005A80BE /* Preview Content */,
+			);
+			path = BooksMac;
+			sourceTree = "<group>";
+		};
+		33EA5AE9258369F8005A80BE /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				33EA5AEA258369F8005A80BE /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		33FDCDDB25826D5400FDF434 = {
 			isa = PBXGroup;
 			children = (
 				33FDCDE625826D5400FDF434 /* BookLibrarySwiftUI */,
+				33EA5AE2258369F8005A80BE /* BooksMac */,
 				33FDCDE525826D5400FDF434 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				33FDCDE425826D5400FDF434 /* BookLibrarySwiftUI.app */,
+				33EA5AE1258369F8005A80BE /* BooksMac.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -62,6 +110,7 @@
 		33FDCDE625826D5400FDF434 /* BookLibrarySwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				33EA5AD7258368F6005A80BE /* BookLibrarySwiftUI.entitlements */,
 				33FDCDF725826D5A00FDF434 /* Models */,
 				33FDCDE725826D5400FDF434 /* BookLibrarySwiftUIApp.swift */,
 				33FDCDFF25827A3300FDF434 /* FormView.swift */,
@@ -95,6 +144,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		33EA5AE0258369F8005A80BE /* BooksMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33EA5AEE258369F8005A80BE /* Build configuration list for PBXNativeTarget "BooksMac" */;
+			buildPhases = (
+				33EA5ADD258369F8005A80BE /* Sources */,
+				33EA5ADE258369F8005A80BE /* Frameworks */,
+				33EA5ADF258369F8005A80BE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BooksMac;
+			productName = BooksMac;
+			productReference = 33EA5AE1258369F8005A80BE /* BooksMac.app */;
+			productType = "com.apple.product-type.application";
+		};
 		33FDCDE325826D5400FDF434 /* BookLibrarySwiftUI */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 33FDCDF325826D5500FDF434 /* Build configuration list for PBXNativeTarget "BookLibrarySwiftUI" */;
@@ -121,6 +187,9 @@
 				LastSwiftUpdateCheck = 1220;
 				LastUpgradeCheck = 1220;
 				TargetAttributes = {
+					33EA5AE0258369F8005A80BE = {
+						CreatedOnToolsVersion = 12.2;
+					};
 					33FDCDE325826D5400FDF434 = {
 						CreatedOnToolsVersion = 12.2;
 					};
@@ -140,11 +209,21 @@
 			projectRoot = "";
 			targets = (
 				33FDCDE325826D5400FDF434 /* BookLibrarySwiftUI */,
+				33EA5AE0258369F8005A80BE /* BooksMac */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		33EA5ADF258369F8005A80BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33EA5AEB258369F8005A80BE /* Preview Assets.xcassets in Resources */,
+				33EA5AE8258369F8005A80BE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		33FDCDE225826D5400FDF434 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -157,6 +236,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		33EA5ADD258369F8005A80BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33EA5AF425836A1D005A80BE /* Book.swift in Sources */,
+				33EA5AF825836A28005A80BE /* BookListView.swift in Sources */,
+				33EA5AF925836A28005A80BE /* FormView.swift in Sources */,
+				33EA5AF325836A1D005A80BE /* Author.swift in Sources */,
+				33EA5AFA25836A28005A80BE /* BookDetailsView.swift in Sources */,
+				33EA5AF525836A1D005A80BE /* Library.swift in Sources */,
+				33EA5AE6258369F8005A80BE /* ContentView.swift in Sources */,
+				33EA5AE4258369F8005A80BE /* BooksMacApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		33FDCDE025826D5400FDF434 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -174,6 +268,56 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		33EA5AEF258369F8005A80BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BooksMac/BooksMac.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"BooksMac/Preview Content\"";
+				DEVELOPMENT_TEAM = A7SGM6JEMA;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = BooksMac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.humancoders.ios.BooksMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		33EA5AF0258369F8005A80BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BooksMac/BooksMac.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"BooksMac/Preview Content\"";
+				DEVELOPMENT_TEAM = A7SGM6JEMA;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = BooksMac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.humancoders.ios.BooksMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		33FDCDF125826D5500FDF434 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -295,6 +439,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BookLibrarySwiftUI/BookLibrarySwiftUI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"BookLibrarySwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = A7SGM6JEMA;
@@ -307,6 +452,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.humancoders.ios.BookLibrarySwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -317,6 +463,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BookLibrarySwiftUI/BookLibrarySwiftUI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"BookLibrarySwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = A7SGM6JEMA;
@@ -329,6 +476,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.humancoders.ios.BookLibrarySwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -337,6 +485,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		33EA5AEE258369F8005A80BE /* Build configuration list for PBXNativeTarget "BooksMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33EA5AEF258369F8005A80BE /* Debug */,
+				33EA5AF0258369F8005A80BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		33FDCDDF25826D5400FDF434 /* Build configuration list for PBXProject "BookLibrarySwiftUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
