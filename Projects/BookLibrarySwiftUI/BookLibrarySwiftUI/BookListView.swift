@@ -14,27 +14,32 @@ struct BookListView: View {
     @State private var formIsShown = false
 
     var body: some View {
-        NavigationView {
-            List(library.books) { book in
-                NavigationLink(
-                    destination: BookDetailsView(book: book),
-                    label: {
-                        VStack(alignment: .leading) {
-                            Text(book.title)
-                            Text(book.author?.fullName ?? "")
-                                .font(.callout)
-                                .foregroundColor(.gray)
-                        }
-
-                    })
+        TabView {
+            NavigationView {
+                List(library.books) { book in
+                    NavigationLink(
+                        destination: BookDetailsView(book: book),
+                        label: {
+                            BookListCell(book: book)
+                        })
+                }
+                .navigationTitle("My books")
+                .navigationBarItems(trailing: Button("Plus") {
+                    formIsShown = true
+                })
+                .sheet(isPresented: $formIsShown, content: {
+                    FormView(library: library)
+                })
             }
-            .navigationTitle("My books")
-            .navigationBarItems(trailing: Button("Plus") {
-                formIsShown = true
-            })
-            .sheet(isPresented: $formIsShown, content: {
-                FormView(library: library)
-            })
+            .tabItem {
+                Text("Books")
+                Image(systemName: "book")
+            }
+            Text("Future screen")
+                .tabItem {
+                    Text("Future")
+                    Image(systemName: "cart")
+                }
         }
     }
 }
@@ -42,5 +47,19 @@ struct BookListView: View {
 struct BookListView_Previews: PreviewProvider {
     static var previews: some View {
         BookListView()
+    }
+}
+
+struct BookListCell: View {
+
+    let book: Book
+
+    var body: some View {
+        VStack(alignment: .leading) {
+            Text(book.title)
+            Text(book.author?.fullName ?? "")
+                .font(.callout)
+                .foregroundColor(.gray)
+        }
     }
 }
